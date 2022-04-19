@@ -82,14 +82,14 @@ def train(net,loader_train,loader_test,optim,criterion):
 			if True :
 				torch.save({
 							'step':step,
-              'losses':losses,
+							'losses':losses,
 							'model':net.state_dict()
-				}, "/content/gdrive/My Drive/ffamodelnew{}.pk".format(step))
+				},opt.model_dir)
 				torch.save({
 							'step':step,
 							'losses':losses,
 							'model':net.state_dict()
-				},opt.model_dir)
+				},"/kaggle/working/ffanetzip/ffamodelkaggle{}.pk".format(step))
         
 
 
