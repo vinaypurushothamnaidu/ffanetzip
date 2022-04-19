@@ -29,8 +29,8 @@ parser.add_argument('--perloss',action='store_true',help='perceptual loss')
 
 opt=parser.parse_args()
 opt.device='cuda' if torch.cuda.is_available() else 'cpu'
-model_name="ffamodelnew20000.pk"
-opt.model_dir=opt.model_dir+model_name
+model_name="ffamodelnew1600.pk"
+opt.model_dir=opt.model_dir+model_name+'.pk'
 log_dir='logs/'+model_name
 
 print(opt)
