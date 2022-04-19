@@ -15,7 +15,7 @@ parser.add_argument('--device',type=str,default='Automatic detection')
 parser.add_argument('--resume',type=bool,default=True)
 parser.add_argument('--eval_step',type=int,default=5000)
 parser.add_argument('--lr', default=0.0001, type=float, help='learning rate')
-parser.add_argument('--model_dir',type=str,default='./trained_models/')
+parser.add_argument('--model_dir',type=str,default='/kaggle/working/ffanetzip/')
 parser.add_argument('--trainset',type=str,default='its_train')
 parser.add_argument('--testset',type=str,default='its_test')
 parser.add_argument('--net',type=str,default='ffa')
@@ -29,7 +29,7 @@ parser.add_argument('--perloss',action='store_true',help='perceptual loss')
 
 opt=parser.parse_args()
 opt.device='cuda' if torch.cuda.is_available() else 'cpu'
-model_name="ffamodelnew1600.pk"
+model_name="ffamodelnew20000.pk"
 opt.model_dir=opt.model_dir+model_name+'.pk'
 log_dir='logs/'+model_name
 
