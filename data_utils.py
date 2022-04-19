@@ -78,10 +78,10 @@ class RESIDE_Dataset(data.Dataset):
 import os
 pwd=os.getcwd()
 print(pwd)
-path='/content'#path to your 'data' folder
+path='/kaggle/input/'
 
-ITS_train_loader=DataLoader(dataset=RESIDE_Dataset(path+'/ITS',train=True,size=crop_size),batch_size=BS,shuffle=True)
-ITS_test_loader=DataLoader(dataset=RESIDE_Dataset(path+'/SOTS',train=False,size='whole img'),batch_size=1,shuffle=False)
+ITS_train_loader=DataLoader(dataset=RESIDE_Dataset(path+'its-reside/ITS',train=True,size=crop_size),batch_size=BS,shuffle=True)
+ITS_test_loader=DataLoader(dataset=RESIDE_Dataset(path+'sotsreside/SOTS',train=False,size='whole img'),batch_size=1,shuffle=False)
 
 # OTS_train_loader=DataLoader(dataset=RESIDE_Dataset(path+'/RESIDE/OTS',train=True,format='.jpg'),batch_size=BS,shuffle=True)
 # OTS_test_loader=DataLoader(dataset=RESIDE_Dataset(path+'/RESIDE/SOTS/outdoor',train=False,size='whole img',format='.png'),batch_size=1,shuffle=False)
