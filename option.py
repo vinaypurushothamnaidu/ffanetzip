@@ -29,7 +29,7 @@ parser.add_argument('--perloss',action='store_true',help='perceptual loss')
 
 opt=parser.parse_args()
 opt.device='cuda' if torch.cuda.is_available() else 'cpu'
-model_name="ffamodelkaggle99000.pk"
+model_name="ffamodelkaggle143000.pk"
 opt.model_dir="/kaggle/working/ffanetzip/trained_models/" + model_name
 log_dir='logs/'+model_name
 
